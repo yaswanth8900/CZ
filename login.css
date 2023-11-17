@@ -1,14 +1,10 @@
 
 .box{
     padding-top: 20vh;
-
 }
 body {
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(
-    rgba(31, 0, 116, 0.1),
-    rgba(11, 0, 33, 0.6)),s
-    url(bg1.jpg);
+  background-color: #F1D5BF;
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -18,7 +14,7 @@ body {
 
 h3 {
   text-align: center;
-  color: #aaa;
+  color: #333333;
   letter-spacing: 2px;
 }
 .form{
@@ -46,13 +42,13 @@ input {
   outline: none;
   border-style: none;
   background-color: transparent;
-  color: #ddd;
+  color: #6D6246;
 }
 
 
 .buttons {
   display: flex;
- margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
   padding: 0 3rem;
   font-size: 0.8rem;
 }
