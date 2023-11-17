@@ -8,7 +8,7 @@ body {
   background: linear-gradient(
     rgba(31, 0, 116, 0.1),
     rgba(11, 0, 33, 0.6)),s
-    url("C:\Users\HP\OneDrive\Desktop\bg2.jpg");
+    url(bg1.jpg);
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
