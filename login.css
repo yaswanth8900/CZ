@@ -1,0 +1,108 @@
+
+.box{
+    padding-top: 20vh;
+
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(
+    rgba(31, 0, 116, 0.1),
+    rgba(11, 0, 33, 0.6)),s
+    url("C:\Users\HP\OneDrive\Desktop\bg2.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    accent-color: #602bff;
+}
+
+h3 {
+  text-align: center;
+  color: #aaa;
+  letter-spacing: 2px;
+}
+.form{
+    width: 350px;
+  height: 400px;
+  margin: 0 auto;
+  border-radius: 10px;
+  
+
+}
+
+.username,.password{
+    display: flex;
+  justify-content: space-around;
+  border-radius: 50px;
+  align-items: center;
+  margin: 0 2.5rem 1rem 2.5rem;
+  outline: none;
+  border-style: none;
+  border: 1px solid #5f3dc4;
+}
+
+input {
+  padding: 0.75rem 1.5rem;
+  outline: none;
+  border-style: none;
+  background-color: transparent;
+  color: #ddd;
+}
+
+
+.buttons {
+  display: flex;
+ margin-bottom: 0.5rem;
+  padding: 0 3rem;
+  font-size: 0.8rem;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  outline: none;
+  border-style: none;
+  margin-right: 0.25rem;
+  padding: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: #5f3dc4;
+  transition: all 0.3s;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
+.btn a {padding: 0.5rem 1.5rem;
+  
+  border-radius: 50px;
+  outline: none;
+  border-style: none;
+  width: 65%;
+  cursor: pointer;
+  transition: all 0.5s;
+  background-color: #fff;
+  text-align: center;
+  color: #5f3dc4;
+}
+
+.btn a:hover {
+  opacity: 0.8;
+}
+.register {
+  display: flex;
+  justify-content: center;
+  font-style: 0.75rem;
+  margin-top: 0.75rem;
+}
