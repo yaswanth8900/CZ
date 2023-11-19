@@ -78,8 +78,8 @@ a:hover {
   justify-content: center;
 }
 
-.btn a {padding: 0.5rem 1.5rem;
-  
+.btn a {
+  padding: 0.5rem 1.5rem;
   border-radius: 50px;
   outline: none;
   border-style: none;
