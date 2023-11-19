@@ -1,0 +1,16 @@
+.frame1{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+.name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    letter-spacing: 3px;
+}
+.sc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
