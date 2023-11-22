@@ -1,8 +1,20 @@
 .frame1{
-    display: grid;
-    grid-template-columns: 20% 60% 20%;
+    display: flex;
+
+}
+.frame1 > .logo,
+.frame1 > .sc{
+width: 20%;
+}
+.frame1 > .name{
+    width: 60%;
+}
+.logo{
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
     
-    border: 1px solid;
 }
 .name{
     display: flex;
@@ -10,6 +22,7 @@
     align-items: center;
     font-size: 80px;
     letter-spacing: 3px;
+    
 }
 .sc{
     display: flex;
@@ -42,3 +55,15 @@
     0% { transform: translateX(0); }
     100% { transform: translateX(calc(-250px * 5)); }
 }
+.shirt {
+    max-height: 250px;
+    border: 1px solid #ddd;
+    display: flex;
+    overflow-x: scroll;
+    
+}
+.item{
+    min-width: 120px;
+    height: 300px;
+}
+
