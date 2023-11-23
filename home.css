@@ -30,9 +30,20 @@ width: 20%;
     align-items: center;
 }
 .navi{
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
     border: 1px solid ;
+    border-radius: 5px;
+    background-color: aqua;
+    position: sticky;
+}
+.navi > .place{
+width: 20%;
 
 }
+
+
 
 .slider {
     width: 100%;
@@ -56,14 +67,12 @@ width: 20%;
     100% { transform: translateX(calc(-250px * 5)); }
 }
 .shirt {
-    max-height: 250px;
     border: 1px solid #ddd;
     display: flex;
-    overflow-x: scroll;
-    
+    overflow-x: scroll;   
 }
 .item{
-    min-width: 120px;
-    height: 300px;
+    width: 100%;
+    height: 220px;
 }
 
