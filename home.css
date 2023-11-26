@@ -81,3 +81,6 @@ width: 20%;
     height: 220px;
     padding: 25px 5px 0;
 }
+::-webkit-scrollbar {
+    width: 10px;
+}
