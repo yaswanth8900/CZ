@@ -37,7 +37,7 @@ width: 20%;
     border-radius: 5px;
     background-color: aqua;
     position: sticky;
-    top: 1;
+    top: 0;
 }
 .navi > .place{
 width: 20%;
