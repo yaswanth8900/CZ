@@ -1,10 +1,10 @@
-var userpat = /^[A-Za-z]+[0-9]+$/;
-var numpat = /^[0-9]{10}$/;
-var form = document.forms['valid'];
-var user = form['t1'].value;
-var numb = form['t3'].value;
-var pass = form['t4'].value;
-var cp = form['t5'].value;
+var userpat = ("[A-Za-z]+[0-9]+");
+var numpat = ("/^[0-9]{10}");
+
+var user = document.myForm.t1.value;
+var numb = document.myForm.t3.value;
+var pass = document.myForm.t4.value;
+var cp = document.myForm.t5.value;
 function validated()
 {
     if (!userpat.test(user)) {
