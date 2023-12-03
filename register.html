@@ -15,7 +15,7 @@
     <main class="box">
         <div class="form">
 	<h1>Register</h1>
-        <form onsubmit="return validated()">
+        <form onsubmit="return validateForm()">
             <div class="username">
 			<input type="text" placeholder="Your Name" required></div>
             <div class="username" >
@@ -35,31 +35,31 @@
         </form>
         </div>
         <script>
-            function validated() {
-                var userPattern = ("[A-Za-z]+[0-9]+$");
-                var numPattern = ("[0-9]{10}");
-        
-                var user = document.getElementById("t1").value;
-                var numb = document.getElementById("t3").value;
-                var pass = document.getElementById("t4").value;
-                var cp = document.getElementById("t5").value;
-        
-                if (!userPattern.test(user)) {
-                    alert("Username must contain letters and ends with numbers");
-                    return false;
-                } else if (!numPattern.test(numb)) {
-                    alert("Phone number must be 10 digits");
-                    return false;
-                } else if (pass.length < 8) {
-                    alert("Password must be at least 8 characters");
-                    return false;
-                } else if (pass !== cp) {
-                    alert("Password and Confirm Password should be same");
-                    return false;
-                } 
-        
-                return true;
-            }
+        function validateForm() {
+            const username = document.getElementById("t1").value;
+            const phone = document.getElementById("t3").value;
+            const password = document.getElementById("t4").value;
+            const confirmPassword = document.getElementById("t5").value;
+
+            const usernamePattern = /^[A-Za-z]+\d+$/;
+            const phonePattern = /^\d{10}$/;
+
+            if (!usernamePattern.test(username)) {
+                alert("Username must contain letters and ends with numbers");
+                return false;
+            } else if (!phonePattern.test(phone)) {
+                alert("Phone number must be 10 digits");
+                return false;
+            } else if (!password.length > 8) {
+                alert("Password must be at least 8 characters and include at least one letter and one digit");
+                return false;
+            } else if (password !== confirmPassword) {
+                alert("Password and Confirm Password should be the same");
+                return false;
+            } 
+
+            return true;
+        }
         </script>
 </body>
 </html>
