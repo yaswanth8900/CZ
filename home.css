@@ -29,26 +29,23 @@ width: 20%;
     justify-content: center;
     align-items: center;
 }
-.navi{
+.navbar {
+    overflow: hidden;
     display: flex;
-    align-items: center;
-    height: 50px;
-    border: 1px solid ;
-    border-radius: 5px;
-    background-color: aqua;
-    position: sticky;
-    top: 0;
+    background-color: #333;
+    justify-content: space-evenly;
+}   
+.navbar a{
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}   
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+
 }
-.navi > .place{
-width: 20%;
-}  
-.place{
-    padding-left: 100px;
-}
-
-
-
-
 .slider {
     width: 100%;
     height: 300px;
