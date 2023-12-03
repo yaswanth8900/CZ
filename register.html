@@ -16,20 +16,20 @@
     <main class="box">
         <div class="form">
 	<h1>Register</h1>
-        <form name="myForm"  onsubmit="return validated()" method="post">
+        <form onsubmit="return validated()" method="post" action="login.html">
             <div class="username">
 			<input type="text" placeholder="Your Name" required></div>
             
             <div class="username" >
-            <input type="text" placeholder="User Name" name="user" required></div>
+            <input type="text" placeholder="User Name" id="t1"  required></div>
             <div class="username">
-                <input type="email" placeholder="Email" name="t2" required ></div>
+                <input type="email" placeholder="Email" id="t2" required ></div>
                 <div class="username">
-                    <input type="text" placeholder="Mobile No." name="t3" required ></div>
+                    <input type="text" placeholder="Mobile No." id="t3" required ></div>
             <div class="password">   
-		<input type="password" placeholder="Password" name="t4" required ></div>
+		<input type="password" placeholder="Password" id="t4" required ></div>
         <div class="password">   
-            <input type="password" placeholder="Confirm Password" name="t5" required ></div>
+            <input type="password" placeholder="Confirm Password" id="t5" required ></div>
 	<div class="bt">
 	<div class="btn">
     <input type="submit" value="Register" href="login.html"></input></div>
