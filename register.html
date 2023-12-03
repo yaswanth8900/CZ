@@ -4,32 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="login.css">
+    <link rel="stylesheet" type="text/css" href="register.css">
     <style>
     .box{
         padding-top: 10vh;
     }
     </style>
+    <script src="reg.js"></script>
 </head>
 <body>
     <main class="box">
         <div class="form">
-	<h3>Register</h3>
-        <form>
+	<h1>Register</h1>
+        <form name="valid" onsubmit="return validated()">
             <div class="username">
-			<input type="text" placeholder="First Name"></div>
+			<input type="text" placeholder="Your Name" required></div>
+            
+            <div class="username" >
+            <input type="text" placeholder="User Name" name="t1" required></div>
             <div class="username">
-            <input type="text" placeholder="Last Name"></div>
-            <div class="username">
-                <input type="email" placeholder="Email"></div>
+                <input type="email" placeholder="Email" name="t2" required ></div>
                 <div class="username">
-                    <input type="text" placeholder="Mobile No."></div>
+                    <input type="text" placeholder="Mobile No." name="t3" required ></div>
             <div class="password">   
-		<input type="password" placeholder="Password"></div>
+		<input type="password" placeholder="Password" name="t4" required ></div>
         <div class="password">   
-            <input type="password" placeholder="Confirm Password"></div>
+            <input type="password" placeholder="Confirm Password" name="t5" required ></div>
+	<div class="bt">
 	<div class="btn">
-		<a href="register.html" target="_blank">Register</a>	   </div>
+    <input type="submit" value="Register" href="login.html"></input></div>
+	</div>
 					
         </form>
         </div>
