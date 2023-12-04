@@ -2,7 +2,7 @@
 
 body {
         font-family: "Poppins", sans-serif;
-    background-image: url('bg.jpg');
+    background-image: url('images/bd.jpg');
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -10,14 +10,14 @@ body {
   }
   
   h1 {
-    text-align: center;
+    padding-left: 50px;
     color: #333333;
     letter-spacing: 2px;
   }
   .form{
     width: 350px;
     height: 400px;
-    margin: 0 auto;
+    margin: ;
     border-radius: 10px;
     
   
@@ -39,7 +39,7 @@ body {
     outline: none;
     border-style: none;
     background-color: transparent;
-    color: #6D6246;
+    color:#000;
   }
   
   

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registration</title>
     <link rel="stylesheet" type="text/css" href="register.css">
     <script src="https://kit.fontawesome.com/0a5ca644e4.js" crossorigin="anonymous"></script>
     <style>
@@ -16,7 +16,7 @@
     <main class="box">
         <div class="form">
 	<h1>Register</h1>
-        <form onsubmit="return validateForm()">
+        <form onsubmit="return validateForm()" action="home.html">
             <div class="username"><i class="fa-solid fa-user"></i>
 			<input type="text" placeholder="Your Name" required></div>
             <div class="username" ><i class="fa-regular fa-user"></i>
@@ -31,7 +31,7 @@
             <input type="password" placeholder="Confirm Password" id="t5" required ></div>
 	<div class="bt">
 	<div class="btn">
-    <input type="submit" value="Register" href="login.html"></input></div>
+    <input type="submit" value="Register"></input></div>
 	</div>
         </form>
         </div>
