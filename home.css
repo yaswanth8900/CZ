@@ -89,7 +89,7 @@ input{
 .item{
     
     min-width: 150px;
-    height: 220px;
+    height: 230px;
     padding: 25px 5px 0;
     object-fit: contain;
 }
@@ -101,4 +101,18 @@ input{
 }
 ::-webkit-scrollbar {
     width: 10px;
+}
+s{
+    color:gray;
+}
+.r{
+    display: flex;
+}
+.r > .rate,
+.r > .per
+{
+    width:50%;
+}
+.per{
+    color:green;
 }
