@@ -1,0 +1,231 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+.frame1{
+    display: flex;
+
+}
+.frame1 > .logo,
+.frame1 > .sc{
+width: 20%;
+}
+.frame1 > .name{
+    width: 60%;
+}
+.logo{
+    background-image: url('images/bg.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    
+}
+.name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    letter-spacing: 3px;
+    
+}
+.sc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3rem 1rem 3rem;
+}
+.se input{
+    
+    outline: none;
+    border-style: none;
+    border: 1px solid #5f3dc4;
+    border-radius: 25px;
+}
+input{
+    padding: 0.75rem 1.5rem;
+    
+
+}
+.navbar {
+    overflow: hidden;
+    display: flex;
+    background-color: #333;
+    justify-content: space-evenly;
+}   
+.navbar a{
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}   
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.container > .image {
+    width: 40%;
+}
+.container > .product-details {
+    width: 60%;
+}
+
+.alt-images {
+    border:2px solid #000;
+    
+}
+img {
+    width: 70%;
+    height: 80%;
+    margin-right: 20px;
+}
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.image {
+    overflow: hidden;
+    position: relative;
+}
+
+.image img {
+    transition: transform 0.3s ease; /* Adding a smooth transition */
+}
+
+.image:hover img {
+    transform: scale(1.1); /* Scaling the image up by 10% on hover */
+}
+
+.product-details {
+    max-width: 70%;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    
+}
+
+.price {
+    font-size: 20px;
+    color: #C21807;
+    margin-bottom: 10px;
+    display: flex;
+    border-bottom: 1px solid gray;
+    padding-bottom: 25px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+s{
+    color:gray;
+}
+
+
+.per{
+    color:green;
+    padding-left: 30px;
+}
+
+.col {
+    font-size: large;
+}
+.checkbox-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 15px 0 15px 0;
+}
+.radios {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    width: 60%;
+}
+.checkbox-container input[type='radio'] {
+    display: none; 
+}
+.checkbox-container label {
+    display: flex;
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    border: 1px solid #000;
+    cursor: pointer;
+    font-size: small;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbox-container input[type='radio']:checked + label {
+    border: 2px solid #000; 
+}
+#red-label { border-radius: 50%; background-color: red;  }
+#green-label { border-radius: 50%; background-color: green; }
+#blue-label { border-radius: 50%; background-color: blue; }
+#yellow-label { border-radius: 50%; background-color: yellow; }
+#purple-label { border-radius: 50%; background-color: purple; }
+
+.sub {
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0 20px 0;
+}
+.submit-button {
+    padding: 10px 20px;
+    margin: 10px 0; 
+    border: none;
+    color: white;
+    cursor: pointer;
+    height: 50px;
+    font-size: larger;
+    
+}
+.submit-button-1 {
+    background-color: #4CAF50; /* Green */
+    width: 60%;
+    
+}
+.submit-button-2 {
+    background-color: #008CBA; /* Blue */
+    width: 60%;
+}
+
+::-webkit-scrollbar {
+    width: 10px; 
+    
+}   
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 10px;    
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}    

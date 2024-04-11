@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+    <script>
+        function handleClick() {
+            const im = document.getElementById('img').src;
+            const txt = document.getElementById('txt').textContent;
+            const op = document.getElementById('op').textContent;
+            const dp = document.getElementById('dp').textContent;
+            const dis = document.getElementById('dis').textContent;
+            let searchText = "images";
+            let startIndex = im.indexOf(searchText);
+            const res=im.substring(startIndex,im.length);
+            document.getElementById('image').value = res;
+            document.getElementById('txt').value = txt;
+            document.getElementById('oprice').value = op;
+            document.getElementById('disprice').value = dp;
+            document.getElementById('discount').value = dis;
+            document.getElementById('myForm').submit();
+            document.write(txt);
+    }
+</script>
+    <style>
+    .item{
+    
+    min-width: 150px;
+    height: 230px;
+    padding: 25px 5px 0;
+    object-fit: contain;
+}
+.item:hover{
+    box-shadow: rgba(214, 157, 11, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.item img{
+    padding-left: 25px;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+s{
+    color:gray;
+}
+.r{
+    display: flex;
+}
+.r > .rate,
+.r > .per
+{
+    width:50%;
+}
+.per{
+    color:green;
+}
+    </style>
+</head>
+<body>
+    <div class="item" id="item" onclick="handleClick()">
+        <div class="im" id="im">
+            <img src="images/suit2.jpg" width="100" height="150" id="img">
+        </div>
+        <div class="txt" id="txt">
+            Grey Goose Regular Formal Shirts for Men Grey / XXL
+        </div><div class="r" ><div class="rate" id="dp">&#8377 599  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
+    </div>
+    <form id="myForm" action="product" method="post" style="display: none;">
+        <input type="hidden" id='image' name="image" value="">
+        <input type="hidden" id='txt' name="txt" value="">
+        <input type="hidden" id="oprice" name="oprice" value="">
+        <input type="hidden" id="disprice" name="disprice" value="">
+        <input type="hidden" id="discount" name="discount" value="">
+    </form>
+</body>
+</html>
