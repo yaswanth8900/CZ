@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Supima Cotton V-Neck T-Shirt</title>
     <link rel="stylesheet" href="products.css">
-    
+    <script src="https://kit.fontawesome.com/0a5ca644e4.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="frame1">
@@ -21,7 +21,7 @@
         </div>
     </div>
     <div class="navbar">
-        <a href="home.html" >Home</a>
+        <a href="index.html" >Home</a>
         <a href ="about.html " >About Us</a>
         <a href ="contact.html" >Contact Us</a>
         <a href ="register.html" >Register</a >
@@ -33,6 +33,21 @@
         
         <div class="product-details">
             <h1>WOMEN SUPIMA® COTTON V-NECK SHORT-SLEEVE T-SHIRT</h1>
+            <div class="wrapper">
+                <form>
+                    <input type="number" id="checkboxNumber" min="1" max="5" />
+                    <input type="checkbox" id="st1" value="1" />
+                    <label for="st1"></label>
+                    <input type="checkbox" id="st2" value="2" />
+                    <label for="st2"></label>
+                    <input type="checkbox" id="st3" value="3" />
+                    <label for="st3"></label>
+                    <input type="checkbox" id="st4" value="4" />
+                    <label for="st4"></label>
+                    <input type="checkbox" id="st5" value="5" />
+                    <label for="st5"></label>
+                </form>
+            </div>
             <div class="price">
                 <div class="rate">&#8377 599  
                     <s>799</s> 
@@ -88,9 +103,26 @@
                     <input type="submit" value="Add To Cart" class="submit-button submit-button-2">
                 </center>
             </form>
-            <h1>Product Details:</h1>
+            
 
-        </div>  
+        </div> 
+        
+        
+        
     </div>
+    <script>
+        document.getElementById('checkboxNumber').addEventListener('input', function() {
+    const num = parseInt(this.value);
+
+    if (num >= 1 && num <= 5) {
+        for (let i = 1; i <= 5; i++) {
+            document.getElementById(`st${i}`).checked = i <= num;
+        }
+    } else {
+        alert('Please enter a number between 1 and 5.');
+    }
+});
+
+    </script>
 </body>
 </html>

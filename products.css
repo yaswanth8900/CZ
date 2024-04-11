@@ -229,3 +229,56 @@ s{
 ::-webkit-scrollbar-thumb:hover {
     background: #555; 
 }    
+
+
+.wrapper {
+    position: relative;
+    display: inline-block;
+    border: none;
+    font-size: 14px;
+    margin: 5px auto;
+    left: 10%;
+    transform: translateX(-50%);
+}
+
+.wrapper input {
+    border: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    opacity: 0;
+}
+
+.wrapper label {
+    position: relative;
+    float: right;
+    color: #C8C8C8;
+}
+
+.wrapper label:before {
+    margin: 5px;
+    content: "⭐";
+    font-family: FontAwesome;
+    display: inline-block;
+    font-size: 1.5em;
+    color: #ccc;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+
+.wrapper input:checked ~ label:before {
+    color: #FFC107;
+}
+
+.wrapper label:hover ~ label:before {
+    color: #ffdb70;
+}
+
+.wrapper label:hover:before {
+    color: #FFC107;
+}
