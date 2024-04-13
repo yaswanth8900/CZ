@@ -284,6 +284,13 @@ s{
 }
 
 .small-image {
-    position: relative;
-    display: inline-block;
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
 }
+.small-image img {
+    width: 50px;
+    height: 70px;
+
+}
+

@@ -29,7 +29,7 @@
     </div>
     <div class="container">
 
-        <div class="image"><img src="images/suit1alt1.jpg" alt="Supima Cotton V-Neck T-Shirt"></div>
+        <div class="image"><img src="images/suit1alt1.jpg" alt="Supima Cotton V-Neck T-Shirt" id="mainImage"></div>
         
         <div class="product-details">
             <h1>WOMEN SUPIMA® COTTON V-NECK SHORT-SLEEVE T-SHIRT</h1>
@@ -55,7 +55,11 @@
                 <div class="per">40%off</div>
             </div>  
             <div class="small-image">
-                <img src="suit1alt2.jpg" alt="Image 1">
+                <img src="images/suit1alt1.jpg" id="imgs" alt="Image 1" onmouseover="return imageSelector(this)">
+                <img src="images/suit1alt2.jpg" id="imgs" alt="Image 2" onmouseover="return imageSelector(this)">
+                <img src="images/suit1alt3.jpg" id="imgs" alt="Image 3" onmouseover="return imageSelector(this)">
+                <img src="images/suit1alt4.jpg" id="imgs" alt="Image 4" onmouseover="return imageSelector(this)">
+                <img src="images/suit1alt5.jpg" id="imgs" alt="Image 5" onmouseover="return imageSelector(this)">
             </div>
             <div class="col">Choose your size:</div>
             <form >
@@ -85,36 +89,16 @@
                     <input type="submit" value="Add To Cart" class="submit-button submit-button-2">
                 </center>
             </form>
-            
-
         </div> 
-        
-        
-        
     </div>
-    <script>
-        document.getElementById('checkboxNumber').addEventListener('input', function() {
-    const num = parseInt(this.value);
 
-    if (num >= 1 && num <= 5) {
-        for (let i = 1; i <= 5; i++) {
-            document.getElementById(`st${i}`).checked = i <= num;
-        }
-    } else {
-        alert('Please enter a number between 1 and 5.');
-    }
-});
-
-const smallImages = document.querySelectorAll('.small-image img');
-const main = document.getElementById('main');
-
-smallImages.forEach((img) => {
-  img.addEventListener('mouseover', () => {
-    main.innerHTML = `<img src="${img.src}" alt="${img.alt}">`;
-  });
-});
-
-
-    </script>
+    
+<script>
+function imageSelector(imgElement) {
+  const newSource = imgElement.src;
+  const image = document.getElementById('mainImage');
+  image.src = newSource;
+}
+</script>
 </body>
 </html>
