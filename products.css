@@ -282,3 +282,8 @@ s{
 .wrapper label:hover:before {
     color: #FFC107;
 }
+
+.small-image {
+    position: relative;
+    display: inline-block;
+}

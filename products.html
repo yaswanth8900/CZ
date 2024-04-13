@@ -29,7 +29,7 @@
     </div>
     <div class="container">
 
-        <div class="image"><img src="images/suit2.jpg" alt="Supima Cotton V-Neck T-Shirt"></div>
+        <div class="image"><img src="images/suit1alt1.jpg" alt="Supima Cotton V-Neck T-Shirt"></div>
         
         <div class="product-details">
             <h1>WOMEN SUPIMA® COTTON V-NECK SHORT-SLEEVE T-SHIRT</h1>
@@ -53,28 +53,10 @@
                     <s>799</s> 
                 </div> 
                 <div class="per">40%off</div>
+            </div>  
+            <div class="small-image">
+                <img src="suit1alt2.jpg" alt="Image 1">
             </div>
-            <div class="col">Available Colors:</div>
-            <form class="choose_col">
-                <div class="checkbox-container">
-                    <div class="radios">
-                        <input type="radio" id="red" name="color" value="red">
-                        <label for="red" id="red-label"></label>
-                    
-                        <input type="radio" id="green" name="color" value="green">
-                        <label for="green" id="green-label"></label>
-                    
-                        <input type="radio" id="blue" name="color" value="blue">
-                        <label for="blue" id="blue-label"></label>
-                    
-                        <input type="radio" id="yellow" name="color" value="yellow">
-                        <label for="yellow" id="yellow-label"></label>
-                    
-                        <input type="radio" id="purple" name="color" value="purple">
-                        <label for="purple" id="purple-label"></label>
-                    </div>
-                </div>
-            </form> 
             <div class="col">Choose your size:</div>
             <form >
                 <div class="checkbox-container">
@@ -122,6 +104,16 @@
         alert('Please enter a number between 1 and 5.');
     }
 });
+
+const smallImages = document.querySelectorAll('.small-image img');
+const main = document.getElementById('main');
+
+smallImages.forEach((img) => {
+  img.addEventListener('mouseover', () => {
+    main.innerHTML = `<img src="${img.src}" alt="${img.alt}">`;
+  });
+});
+
 
     </script>
 </body>
