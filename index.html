@@ -6,14 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crazy Wears</title>
     <script src="https://kit.fontawesome.com/0a5ca644e4.js" crossorigin="anonymous"></script>
+    <script>
+        function handleClick(imgElement) {
+            const txt = document.getElementById('txt').textContent;
+            const op = document.getElementById('op').textContent;
+            const dp = document.getElementById('dp').textContent;
+            const dis = document.getElementById('dis').textContent;
+            const newSource = imgElement.src;
+            let searchText="images";
+            let startIndex=newSource.indexOf(searchText);
+            const res=newSource.substring(startIndex,newSource.length);
+            document.getElementById('image').value=res;
+            document.getElementById('txt').value = txt;
+            document.getElementById('oprice').value = op;
+            document.getElementById('disprice').value = dp;
+            document.getElementById('discount').value = dis;
+            localStorage.setItem("image",res);
+            localStorage.setItem("text",txt);
+            localStorage.setItem("oprice",op);
+            localStorage.setItem("disprice",dp);
+            localStorage.setItem("discount",dis);
+            document.getElementById('myForm').submit();
+    }
+</script>
 </head>
 <body>
     <div class="frame1">
-        <div class="logo">
-        </div>
-        <div class="name">
-            CRAZY WEARS
-        </div>
+        <div class="logo"></div>
+        <div class="name">CRAZY WEARS</div>
         <div class="sc">
             <form>
                 <div class="se"><input type="search" placeholder=SEARCH></div>
@@ -47,458 +67,409 @@
         </div>
     </div>
 <div class="shirt">
-    <div class="item">
-        <div class="im">
-            <img src="images/shirt1.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/shirt1.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div>
-        <div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/shirt2.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/shirt2.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/shirt3.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/shirt3.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/shirt4.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/shirt4.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/shirt5.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/shirt5.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/shirt6.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/shirt6.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/shirt7.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/shirt7.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/shirt8.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/shirt8.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/shirt9.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/shirt9.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/shirt10.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/shirt10.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/shirt11.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/shirt11.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
     <div class="see">
         <a href="#"></a>
     </div>
 </div>
 <div class="shirt">
-    <div class="item">
-        <div class="im">
-            <img src="images/pant1.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/pant1.jpg"  onclick="handleClick(this)"width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/pant2.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/pant2.jpg"  onclick="handleClick(this)"width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/pant3.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/pant3.jpg"  onclick="handleClick(this)"width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/pant4.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/pant4.jpg"  onclick="handleClick(this)"width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/pant5.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/pant5.jpg"  onclick="handleClick(this)"width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/pant6.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/pant6.jpg"  onclick="handleClick(this)"width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/pant7.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/pant7.jpg"  onclick="handleClick(this)"width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/pant8.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/pant8.jpg"  onclick="handleClick(this)"width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/pant9.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/pant9.jpg"  onclick="handleClick(this)"width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/pant10.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/pant10.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/pant11.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/pant11.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
 </div>
 <div class="shirt">
-    <div class="item">
-        <div class="im">
-            <img src="images/child1.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/child1.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/child2.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/child2.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/child3.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/child3.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/child4.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/child4.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/child5.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/child5.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/child6.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/child6.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/child7.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/child7.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/child8.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/child8.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/child9.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/child9.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/child10.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/child10.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/child11.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/child11.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
 </div>
 <div class="shirt">
-    <div class="item">
-        <div class="im">
-            <img src="images/saree1.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/saree1.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/saree2.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/saree2.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/saree3.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/saree3.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/saree4.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/saree4.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/saree5.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/saree5.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/saree6.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/saree6.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/saree7.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/saree7.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/saree8.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/saree8.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/saree9.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/saree9.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/saree10.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/saree10.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/saree11.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/saree11.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
 </div>
 <div class="shirt">
-    <div class="item">
-        <div class="im">
-            <img src="images/suit1.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/suit1.jpg"  onclick="handleClick(this)"width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/suit2.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/suit2.jpg"  onclick="handleClick(this)"width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/suit3.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/suit3.jpg"  onclick="handleClick(this)"width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/suit4.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/suit4.jpg"  onclick="handleClick(this)"width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/suit5.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/suit5.jpg"  onclick="handleClick(this)"width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/suit6.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/suit6.jpg"  onclick="handleClick(this)"width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/suit7.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/suit7.jpg"  onclick="handleClick(this)"width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/suit8.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/suit8.jpg"  onclick="handleClick(this)"width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/suit9.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/suit9.jpg"  onclick="handleClick(this)"width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/suit10.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/suit10.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
-    <div class="item">
-        <div class="im">
-            <img src="images/suit11.jpg" width="100" height="150">
+    <div class="item" id="item" >
+        <div class="im" >
+            <img src="images/suit11.jpg" onclick="handleClick(this)" width="100" height="150" id="img">
         </div>
-        <div class="txt">
-            Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r"><div class="rate">&#8377 599  <s>799</s> </div> <div class="per">40%off</div></div>
+        <div class="txt" id="txt">Grey Goose Regular Formal Shirts for Men Grey / XXL</div>
+        <div class="r"><div class="rate"><strong id="dp">&#8377 599</strong>  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
     </div>
+    <form id="myForm" action="product"  method="post" style="display: none;">
+        <input type="hidden" id='image' name="image" value="">
+        <input type="hidden" id='txt' name="txt" value="">
+        <input type="hidden" id="oprice" name="oprice" value="">
+        <input type="hidden" id="disprice" name="disprice" value="">
+        <input type="hidden" id="discount" name="discount" value="">
+    </form>
 </div>
 </body>
 </html>

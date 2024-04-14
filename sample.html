@@ -21,8 +21,14 @@
             document.getElementById('oprice').value = op;
             document.getElementById('disprice').value = dp;
             document.getElementById('discount').value = dis;
+            localStorage.setItem("image",res);
+            localStorage.setItem("text",txt);
+            localStorage.setItem("oprice",op);
+            localStorage.setItem("disprice",dp);
+            localStorage.setItem("discount",dis);
             document.getElementById('myForm').submit();
-            document.write(txt);
+            
+
     }
 </script>
     <style>
@@ -65,9 +71,9 @@ s{
         </div>
         <div class="txt" id="txt">
             Grey Goose Regular Formal Shirts for Men Grey / XXL
-        </div><div class="r" ><div class="rate" id="dp">&#8377 599  <s id="op">799</s> </div> <div class="per" id="dis">40%off</div></div>
+        </div><div class="r" ><div class="rate"><strong id="dp">&#8377 899</strong>  <s id="op">1099</s> </div> <div class="per" id="dis">10%off</div></div>
     </div>
-    <form id="myForm" action="product" method="post" style="display: none;">
+    <form id="myForm" action="product"  method="post" style="display: none;">
         <input type="hidden" id='image' name="image" value="">
         <input type="hidden" id='txt' name="txt" value="">
         <input type="hidden" id="oprice" name="oprice" value="">
