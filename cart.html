@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Cart</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
     body {
         font-family: Arial, sans-serif;
@@ -150,43 +149,48 @@
                     <p>Men's Shoe</p>
                     <p>Size: 9 (14)</p>
                     <p>Color: Black</p>
-                    <div class="quantity">
-                        <label for="quantity1">Quantity:</label>
-                        <input type="number" id="quantity1" name="quantity1" value="1">
+                    <div class="quantity">    
+                        <form>
+                                <label for="quantity1">Quantity:</label>
+                                <input type="number" id="quantity1" name="quantity1" value="1">
+                        </form>
                     </div>
                     <button class="remove-btn">Remove</button>
-                    <div class="price">$120.00</div>
+                    <div class="price">&#8377 120.00</div>
                 </div>
             </div>
-            <!-- End cart item block -->
             <div class="cart-item">
-                <img src="path-to-nike-shoe-image.jpg" alt="Nike Air Max 90 Essential">
+                <img src="images/child1.jpg" alt="Nike Air Max 90 Essential">
                 <div class="item-details">
                     <h2>Nike Air Max 90 Essential</h2>
                     <p>Men's Shoe</p>
                     <p>Size: 9 (14)</p>
                     <p>Color: Black</p>
                     <div class="quantity">
-                        <label for="quantity1">Quantity:</label>
-                        <input type="number" id="quantity1" name="quantity1" value="1">
+                        <form>
+                            <label for="quantity1">Quantity:</label>
+                            <input type="number" id="quantity1" name="quantity1" value="1">
+                        </form>
                     </div>
                     <button class="remove-btn">Remove</button>
-                    <div class="price">$120.00</div>
+                    <div class="price">&#8377 420.00</div>
                 </div>
             </div>
             <div class="cart-item">
-                <img src="path-to-nike-shoe-image.jpg" alt="Nike Air Max 90 Essential">
+                <img src="images/shirt1.jpg" alt="Nike Air Max 90 Essential">
                 <div class="item-details">
                     <h2>Nike Air Max 90 Essential</h2>
                     <p>Men's Shoe</p>
                     <p>Size: 9 (14)</p>
                     <p>Color: Black</p>
                     <div class="quantity">
-                        <label for="quantity1">Quantity:</label>
-                        <input type="number" id="quantity1" name="quantity1" value="1">
+                        <form>
+                            <label for="quantity1">Quantity:</label>
+                            <input type="number" id="quantity1" name="quantity1" value="1">
+                        </form>
                     </div>
                     <button class="remove-btn">Remove</button>
-                    <div class="price">$120.00</div>
+                    <div class="price">&#8377 120.00</div>
                 </div>
             </div>
         </div>
@@ -195,21 +199,51 @@
             <h3>Summary</h3>
             <div class="subtotal">
                 <span>Subtotal</span>
-                <span>$240.00</span>
+                <span>&#8377<strong id="fprice">240.00</strong></span>
             </div>
             <div class="shipping">
                 <span>Estimated Shipping & Handling</span>
-                <span>$0.00</span>
+                <span>&#8377<strong id="dc">0.00</strong></span>
             </div>
             <div class="total">
                 <span>Estimated Total</span>
-                <span>$240.00</span>
+                <span>&#8377<strong id="tprice">240.00</strong></span>
             </div>
             <button class="checkout-btn">Checkout</button>
         </div>
     </div></div>
 </main>
 
-<script src="scripts.js"></script>
+<script>
+    function totalPrice() {
+        const priceElements = document.querySelectorAll('.price');
+
+  // Initialize total price
+        let totalPrice = 0;
+
+  // Iterate through each <div> element
+        for (const div of priceElements) {
+            const priceText = div.textContent; // Get the text content
+            const price = parseFloat(priceText.replace(/[^\d.]/g, '')); // Extract the numeric value
+            totalPrice += price; // Add to total
+        }
+        document.getElementById('fprice').textContent=totalPrice;
+        if(totalPrice<500)
+        {
+            document.getElementById('dc').textContent=50.00;
+            document.getElementById('tprice').textContent=totalPrice+50.00;
+        }
+        else
+        {
+            document.getElementById('dc').textContent=0.00;
+            document.getElementById('tprice').textContent=totalPrice+0.00;
+        }
+        
+
+}
+
+setInterval(totalPrice, 100); // Execute myFunction every 1000 milliseconds (1 second)
+
+</script>
 </body>
 </html>
